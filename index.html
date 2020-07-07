@@ -14,34 +14,12 @@
       </button>
       <div class="glider">
         <figure>
-          <blockquote>
-            "This is my awesome testimonial"
-          </blockquote>
-          <figcaption>Hal Dix</figcaption>
+          <img src="https://picsum.photos/150/100?random=1" alt="random" />
+          <figcaption>Random Image</figcaption>
         </figure>
         <figure>
-          <blockquote>
-            "This is my awesome testimonial"
-          </blockquote>
-          <figcaption>Hal Dix</figcaption>
-        </figure>
-        <figure>
-          <blockquote>
-            "This is my awesome testimonial"
-          </blockquote>
-          <figcaption>Hal Dix</figcaption>
-        </figure>
-        <figure>
-          <blockquote>
-            "This is my awesome testimonial"
-          </blockquote>
-          <figcaption>Hal Dix</figcaption>
-        </figure>
-        <figure>
-          <blockquote>
-            "This is my awesome testimonial"
-          </blockquote>
-          <figcaption>Hal Dix</figcaption>
+          <img src="https://picsum.photos/150/100?random=2" alt="random" />
+          <figcaption>Random Image</figcaption>
         </figure>
       </div>
       <button aria-label="Next" class="glider-next">
@@ -51,15 +29,32 @@
     </div>
     <script src="glider.min.js"></script>
     <script>
-      new Glider(document.querySelector('.glider'), {
-        slidesToShow: 2.5,
-        slidesToScroll: 5,
-        draggable: true,
-        dots: '.dots',
-        arrows: {
-          prev: '.glider-prev',
-          next: '.glider-next',
-        },
+      const elem = `<figure>
+          <img src="" alt="random" />
+          <figcaption>Random Image</figcaption>
+        </figure>`;
+
+      const numFrames = 10;
+      const items = Array(numFrames).fill(elem).join('');
+      document.querySelector('.glider').innerHTML = items;
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (e) => {
+        const imgs = document.querySelectorAll('img');
+        imgs.forEach(
+          (img, i) => (img.src = `https://picsum.photos/150/100?random=${i}`)
+        );
+
+        new Glider(document.querySelector('.glider'), {
+          slidesToShow: 6,
+          slidesToScroll: 5,
+          draggable: true,
+          dots: '.dots',
+          arrows: {
+            prev: '.glider-prev',
+            next: '.glider-next',
+          },
+        });
       });
     </script>
     <script

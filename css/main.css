@@ -10,11 +10,8 @@ figure {
   padding: 0.7em;
 }
 
-figure blockquote {
-  padding: 0.5em;
-  font-size: 1.3em;
-  font-style: italic;
-  text-align: center;
+figure img {
+  width: 100%;
 }
 
 figure figcaption {
