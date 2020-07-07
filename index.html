@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glider</title>
+    <link rel="stylesheet" type="text/css" href="css/glider.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <div class="glider-contain multiple">
+      <button aria-label="Previous" class="glider-prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="glider">
+        <figure>
+          <blockquote>
+            "This is my awesome testimonial"
+          </blockquote>
+          <figcaption>Hal Dix</figcaption>
+        </figure>
+        <figure>
+          <blockquote>
+            "This is my awesome testimonial"
+          </blockquote>
+          <figcaption>Hal Dix</figcaption>
+        </figure>
+        <figure>
+          <blockquote>
+            "This is my awesome testimonial"
+          </blockquote>
+          <figcaption>Hal Dix</figcaption>
+        </figure>
+        <figure>
+          <blockquote>
+            "This is my awesome testimonial"
+          </blockquote>
+          <figcaption>Hal Dix</figcaption>
+        </figure>
+        <figure>
+          <blockquote>
+            "This is my awesome testimonial"
+          </blockquote>
+          <figcaption>Hal Dix</figcaption>
+        </figure>
+      </div>
+      <button aria-label="Next" class="glider-next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div role="tablist" class="dots"></div>
+    </div>
+    <script src="glider.min.js"></script>
+    <script>
+      new Glider(document.querySelector('.glider'), {
+        slidesToShow: 2.5,
+        slidesToScroll: 5,
+        draggable: true,
+        dots: '.dots',
+        arrows: {
+          prev: '.glider-prev',
+          next: '.glider-next',
+        },
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/808ed40b53.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
