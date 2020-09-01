@@ -23,36 +23,8 @@
       </button>
       <div role="tablist" class="dots"></div>
     </div>
-    <script src="glider.min.js"></script>
-    <script>
-      const elem = `<figure>
-          <img src="" alt="random" />
-          <figcaption>Random Image</figcaption>
-        </figure>`;
-
-      const numFrames = 10;
-      const items = Array(numFrames).fill(elem).join('');
-      document.querySelector('.glider').innerHTML = items;
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', (e) => {
-        const imgs = document.querySelectorAll('img');
-        imgs.forEach(
-          (img, i) => (img.src = `https://picsum.photos/150/100?random=${i}`)
-        );
-
-        new Glider(document.querySelector('.glider'), {
-          slidesToShow: 6,
-          slidesToScroll: 4,
-          draggable: true,
-          dots: '.dots',
-          arrows: {
-            prev: '.glider-prev',
-            next: '.glider-next',
-          },
-        });
-      });
-    </script>
+    <script src="js/glider.min.js"></script>
+    <script src="js/my-glider.js"></script>
     <script
       src="https://kit.fontawesome.com/808ed40b53.js"
       crossorigin="anonymous"
