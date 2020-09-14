@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     (img, i) => (img.src = `https://picsum.photos/150/100?random=${i}`)
   );
 
-  new Glider(document.querySelector('.glider'), {
+  const glider = new Glider(document.querySelector('.glider'), {
     // Mobile-first defaults
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -47,4 +47,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
       },
     ],
   });
+
+  document.getElementById('btn-add').addEventListener('click', () => {
+    const btn = document.createElement('button');
+    btn.setAttribute('data-id', '${el}');
+    btn.className = 'active';
+    btn.textContent = 'click';
+    glider.addItem(btn);
+  });
 });
+
+// window.addEventListener('keyup', () => {
+//   let activeEl = document.activeElement;
+//   console.log('active', activeEl);
+// });
